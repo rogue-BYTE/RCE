@@ -86,10 +86,14 @@ export default function AuthScreen() {
     }
   };
   return (
-    <div className="flex items-center h-[100vh] flex-col pt-16">
-      <p className="text-black text-xl font-black mb-4">Login to get started with RCE</p>
+    <div className="flex items-center h-full flex-col pt-16">
+      <p className="text-black text-4xl font-black mb-4">Get started with RCE</p>
       <div className="h-[450px] w-[650px] px-32 pt-10">
-        <Tabs variant="bordered" color="primary" fullWidth>
+        <Tabs variant="bordered" color="default" radius="none" fullWidth
+          classNames={{
+            tabList: "bg-black",
+          }}
+        >
           <Tab key="sign_up" title="Sign up">
             <Input
               type="text"
@@ -121,7 +125,7 @@ export default function AuthScreen() {
               <Button
                 color="primary"
                 radius="none"
-                className="w-full"
+                className="w-full bg-black"
                 isLoading={isLoading}
                 onClick={handleSignup}
               >
@@ -152,7 +156,7 @@ export default function AuthScreen() {
               <Button
                 color="primary"
                 radius="none"
-                className="w-[50%]"
+                className="w-[50%] bg-black"
                 isLoading={isLoading}
                 onClick={handleLogin}
               >
