@@ -20,6 +20,7 @@ function App() {
   const authToken = getToken();
   const dispatch = useDispatch();
 
+  // TODO: Use isLoading in the template
   const [isLoading, setIsLoading] = useState(false);
 
   const fetchLoggedInUser = async (token) => {
